@@ -1,5 +1,6 @@
 import { SafeAreaView, Text, TextInput, View, TouchableOpacity} from "react-native";
 import { styles } from "./styles";
+import Participant from "../../components/participant";
 
 function Home() {
 
@@ -30,6 +31,10 @@ function Home() {
                     </Text>
                 </TouchableOpacity>
             </View>
+
+            <Participant />
+            <Participant />
+            <Participant />
         </View>
     );
 }
