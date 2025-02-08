@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, TextInput, View, TouchableOpacity} from "react-native";
+import { SafeAreaView, Text, TextInput, View, TouchableOpacity, Alert} from "react-native";
 import { styles } from "./styles";
 import Participant from "../../components/participant";
 
@@ -6,6 +6,10 @@ function Home() {
 
     function handleParticpantAdd() {
         console.log("Adicionando participante");
+    }
+
+    function handleParticpantRemove() {
+        console.log("Removendo participante");
     }
 
     return (
@@ -32,9 +36,7 @@ function Home() {
                 </TouchableOpacity>
             </View>
 
-            <Participant name="Pablo Henrique" />
-            <Participant name="Lacerda" />
-            <Participant name="Rosimeire" />
+            <Participant name="Pablo Henrique" onRemove={handleParticpantRemove}/>
         </View>
     );
 }
