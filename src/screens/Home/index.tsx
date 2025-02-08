@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, View } from "react-native";
+import { SafeAreaView, Text, TextInput, View } from "react-native";
 import { styles } from "./styles";
 
 function Home() {
@@ -11,6 +11,12 @@ function Home() {
             <Text style={styles.eventDate}>
                 Sexta, 4 de Novembro de 2022
             </Text>
+
+            <TextInput style={styles.input}
+                placeholder="Nome do Participante"
+                placeholderTextColor={"#6b6b6b"}
+                keyboardType="email-address"
+            />
         </View>
     );
 }
