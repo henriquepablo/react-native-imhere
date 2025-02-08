@@ -1,7 +1,12 @@
-import { SafeAreaView, Text, TextInput, View } from "react-native";
+import { SafeAreaView, Text, TextInput, View, TouchableOpacity} from "react-native";
 import { styles } from "./styles";
 
 function Home() {
+
+    function handleParticpantAdd() {
+        console.log("Adicionando participante");
+    }
+
     return (
         <View style={styles.container}>
             <SafeAreaView/>
@@ -12,11 +17,19 @@ function Home() {
                 Sexta, 4 de Novembro de 2022
             </Text>
 
-            <TextInput style={styles.input}
-                placeholder="Nome do Participante"
-                placeholderTextColor={"#6b6b6b"}
-                keyboardType="email-address"
-            />
+            <View style={styles.form}>
+                <TextInput style={styles.input}
+                    placeholder="Nome do Participante"
+                    placeholderTextColor={"#6b6b6b"}
+                    keyboardType="email-address"
+                />
+
+                <TouchableOpacity style={styles.button} onPress={handleParticpantAdd}>
+                    <Text style={styles.buttonText}>
+                    +
+                    </Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
