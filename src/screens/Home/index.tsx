@@ -32,9 +32,9 @@ function Home() {
                 </TouchableOpacity>
             </View>
 
-            <Participant />
-            <Participant />
-            <Participant />
+            <Participant name="Pablo Henrique" />
+            <Participant name="Lacerda" />
+            <Participant name="Rosimeire" />
         </View>
     );
 }

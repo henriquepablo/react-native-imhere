@@ -1,11 +1,15 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
-function Participant() {
+type Props = {
+    name: string;
+}
+
+function Participant({ name } : Props) {
     return (
         <View style={styles.container}>
             <Text style={styles.name}>
-                Pablo Henrique
+                { name }
             </Text>
 
 
